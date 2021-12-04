@@ -9,9 +9,20 @@ fn main() {
     let contents = fs::read_to_string(filename)
         .expect("Failed to read input file");
 
-    let lines: Vec<&str> = contents.split("\n").collect();
+    let lines: Vec<&str> = contents.trim().split("\n").collect();
 
-    for line in lines {
+    for line in &lines {
         println!("Line: {}", line);
     }
+
+    part1(&lines);
+    part2(&lines);
+}
+
+fn part1(lines: &Vec<&str>) {
+
+}
+
+fn part2(lines: &Vec<&str>) {
+
 }
